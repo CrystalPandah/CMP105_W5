@@ -19,15 +19,13 @@ Zombie::Zombie()
 
 
 	currentAnimation = &walk;
-	//setTextureRect(currentAnimation->getCurrentFrame());
+	
 
 	
 	// Init input component
 	input = nullptr;
 
-	//void setFlipped(bool flip) { flipped = flip; };
 
-	//bool getFlipped() { return flipped; };
 
 	
 
@@ -61,21 +59,7 @@ void Zombie::handleInput(float dt)
 		velocity.x = 0;
 	}
 
-	//if (input->isKeyDown(sf::Keyboard::Up) && !input->isKeyDown(sf::Keyboard::Down))
-	//{
-	//	//Update y speed
-	//	velocity.y = -70;
-	//}
-	//else if (!input->isKeyDown(sf::Keyboard::Up) && input->isKeyDown(sf::Keyboard::Down))
-	//{
-	//	//Update y speed
-	//	velocity.y = 70;
-	//}
-	//else
-	//{
-	//	//Update y speed
-	//	velocity.y = 0;
-	//}
+	
 	move(velocity * dt);
 	
 }
@@ -86,13 +70,12 @@ void Zombie::handleInput(float dt)
 
 void Zombie::update(float dt)
 {
-	//currentAnimation->animate(dt);
+	
 	setTextureRect(currentAnimation->getCurrentFrame());
 
 	move(velocity*dt);
 
-	//(input->isKeyDown(sf::Keyboard::Right) && !input->isKeyDown(sf::Keyboard::Left))
-	//(input->isKeyDown(sf::Keyboard::Right)
+
 	if (input->isKeyDown(sf::Keyboard::Right) && !input->isKeyDown(sf::Keyboard::Left))
 	{
 		currentAnimation = &walk;
@@ -108,18 +91,7 @@ void Zombie::update(float dt)
 		setTextureRect(currentAnimation->getCurrentFrame());
 
 	}
-	/*if (input->isKeyDown(sf::Keyboard::A))
-	{
-		currentAnimation = &run;
-		currentAnimation->reset();
-		setTextureRect(currentAnimation->getCurrentFrame());
-	}
-	else if (input->isKeyDown(sf::Keyboard::R))
-	{
-		currentAnimation = &punch;
-		currentAnimation->reset();
-		setTextureRect(currentAnimation->getCurrentFrame());
-	}*/
+
 
 	
 
