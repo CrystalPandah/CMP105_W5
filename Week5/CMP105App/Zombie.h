@@ -10,8 +10,6 @@ public:
 
 	void handleInput(float dt);
 	void update(float dt);
-	void setFlipped(bool flip) { flipped = flip; };
-	bool getFlipped() { return flipped; };
 	//float velocity;
 	//sf::Vector2<float>	speed;
 	//sf::Vector2<int>	dir;

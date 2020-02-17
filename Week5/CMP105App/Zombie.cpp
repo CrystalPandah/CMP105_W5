@@ -96,25 +96,14 @@ void Zombie::update(float dt)
 	if (input->isKeyDown(sf::Keyboard::Right) && !input->isKeyDown(sf::Keyboard::Left))
 	{
 		currentAnimation = &walk;
-		//setFlipped(true);
-		//flipped false; 
-		//setFlipped(false flip);
-		//currentAnimation->reset();
-		//getFlipped();
-		setFlipped(false flip);
+		currentAnimation->setFlipped(false);
 		currentAnimation->animate(dt);
 		setTextureRect(currentAnimation->getCurrentFrame());
 	}
-
 	else if (input->isKeyDown(sf::Keyboard::Left) && !input->isKeyDown(sf::Keyboard::Right))
 	{
 		currentAnimation = &walk;
-		//setFlipped(false);
-		//flipped true;
-		//setFlipped(true flip);
-		//currentAnimation->reset();
-		//getFlipped();
-		setFlipped(true flip);
+		currentAnimation->setFlipped(true);
 		currentAnimation->animate(dt);
 		setTextureRect(currentAnimation->getCurrentFrame());
 
