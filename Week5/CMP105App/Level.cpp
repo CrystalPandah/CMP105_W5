@@ -1,17 +1,24 @@
 #include "Level.h"
-#include "Zombie.h"
+#include "Player.h"
 
 Level::Level(sf::RenderWindow* hwnd, Input* in)
 {
 	window = hwnd;
 	input = in;
 
-	marioTexture.loadFromFile("gfx/MarioSheetT.png");
+//	marioTexture.loadFromFile("gfx/MarioSheetT.png");
+//
+//	mario.setSize(sf::Vector2f(100, 100)); //size WxH
+//	mario.setPosition(100, 100);
+//	mario.setTexture(&marioTexture);
+//	mario.setInput(input);
 
-	mario.setSize(sf::Vector2f(100, 100)); //size WxH
-	mario.setPosition(100, 100);
-	mario.setTexture(&marioTexture);
-	mario.setInput(input);
+	pandarunTexture.loadFromFile("gfx/SpriteSheet.png");
+	player.setSize(sf::Vector2f(105, 200));
+	player.setPosition(100, 100);
+	player.setTexture(&pandarunTexture);
+	player.setInput(input);
+
 }
 
 Level::~Level()
@@ -27,20 +34,20 @@ void Level::handleInput(float dt)
 		window->close();
 	}
 
-	mario.handleInput(dt);
+	player.handleInput(dt);
 }
 
 // Update game objects
 void Level::update(float dt)
 {
-	mario.update(dt);
+	player.update(dt);
 }
 
 // Render level
 void Level::render()
 {
 	beginDraw();
-		window->draw(mario);
+		window->draw(player);
 	endDraw();
 }
 

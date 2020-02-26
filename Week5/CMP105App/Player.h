@@ -5,23 +5,23 @@
 enum AnimationStates
 {
 	WALK,
-	SWIM,
-	DUCK
+	PUNCH,
+	JUMP
 };
 
-class Mario : public GameObject
+class Player : public GameObject
 {
 public:
-	Mario();
-	~Mario();
+	Player();
+	~Player();
 
 	void handleInput(float dt);
 	void update(float dt);
 
 protected:
-	Animation	swimAnim,
+	Animation	punchAnim,
 				walkAnim,
-				duckAnim,
+				jumpAnim,
 				*currentAnim;
 	
 	bool		isLeft;

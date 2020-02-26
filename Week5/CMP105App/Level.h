@@ -8,7 +8,7 @@
 #include <iostream>
 //#include <SFML/System/Vector2.hpp>
 //#include <Vector>
-#include "Mario.h"
+#include "Player.h"
 /*
 #include "Zombie.h"
 #include "MarioWalk.h"
@@ -37,7 +37,9 @@ private:
 	//Level objects
 	//Zombie zombie;
 	//sf::Texture zombTexture;
-	Mario mario;
-	sf::Texture marioTexture;
+	//Mario mario;
+	//sf::Texture marioTexture;
+	Player player;
+	sf::Texture pandarunTexture;
 
 };
