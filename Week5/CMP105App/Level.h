@@ -8,9 +8,13 @@
 #include <iostream>
 //#include <SFML/System/Vector2.hpp>
 //#include <Vector>
+#include "Mario.h"
+/*
 #include "Zombie.h"
-
-
+#include "MarioWalk.h"
+#include "MarioSwim.h"
+#include "MarioDuck.h"
+*/
 
 class Level{
 public:
@@ -31,6 +35,9 @@ private:
 	Input* input;
 
 	//Level objects
-	Zombie zombie;
-	sf::Texture zombTexture;
+	//Zombie zombie;
+	//sf::Texture zombTexture;
+	Mario mario;
+	sf::Texture marioTexture;
+
 };

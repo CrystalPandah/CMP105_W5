@@ -162,9 +162,7 @@
     <ClCompile Include="Framework\GameObject.cpp" />
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="MarioDuck.cpp" />
-    <ClCompile Include="MarioSwim.cpp" />
-    <ClCompile Include="MarioWalk.cpp" />
+    <ClCompile Include="Mario.cpp" />
     <ClCompile Include="Zombie.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -176,9 +174,7 @@
     <ClInclude Include="Framework\Input.h" />
     <ClInclude Include="Framework\GameObject.h" />
     <ClInclude Include="Level.h" />
-    <ClInclude Include="MarioDuck.h" />
-    <ClInclude Include="MarioSwim.h" />
-    <ClInclude Include="MarioWalk.h" />
+    <ClInclude Include="Mario.h" />
     <ClInclude Include="Zombie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

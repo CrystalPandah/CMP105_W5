@@ -11,6 +11,10 @@ public:
 	void update(float dt);
 
 protected:
-	Animation walk;
+	Animation mwalk;
 };
+
+
+
+
 
